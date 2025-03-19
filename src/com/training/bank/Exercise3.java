@@ -2,6 +2,8 @@ package com.training.bank;
 
 import java.util.Scanner;
 
+
+/*
 //Base class: Account
 class Account {
  protected int accountNumber;
@@ -182,3 +184,4 @@ public class Exercise3 {
      return null;
  }
 }
+*/
