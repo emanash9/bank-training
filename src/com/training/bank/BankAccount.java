@@ -1,49 +1,74 @@
-package com.training.bank;  // Ensure package name is consistent
+package com.training.bank;
+import java.util.Scanner;
+class BankAccount { // protected // private // default
+	
+	String accountHolderName;
+	
+	void display() {
+		int age = 21; // Local variable
+		
+	}
 
-import java.util.Scanner; // Import Scanner
+	public static void main(String[] args) {
+		
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter Account Number");
+//		int acctNumber = sc.nextInt();
+//		sc.nextLine();
+//		System.out.println("Enter Name");
+//		String name = sc.nextLine();
+//		System.out.println("Enter Rate of interest");
+//		double roi = sc.nextDouble();
+//		System.out.println("Enter amount");
+//		double amount = sc.nextDouble();
+//		SavingAccount account1 = new SavingAccount(acctNumber, name, roi, amount);
+//		
+//		System.out.println(account1);
+//				
+//		System.out.println("Total amount after one year is: "+account1.calculate(account1.getAmount(), 
+//				account1.getRoi()));
+//		
+//		String[] names = new String[4];
+//		names[0] = "Kevin";
+//		names[1] = "Pete";
+//		names[2] = "Adam";
+//		names[3] = "John";
+//		
+//		for(int i=0; i<names.length; i++) {
+//			System.out.println(names[i]);
+//		}
+		
+        Account account1 = new SavingAccount(1234, "John", 1000, 5, 200);
+                
+        System.out.println(account1.display());
+					
+//		System.out.println("Welcome to my Bank");
+//		System.out.println("First Argument: "+args[0]);
+//		
+//		BankAccount account1 = new BankAccount();
+//		account1.accountHolderName = "David";
+//		
+//		short s = 10;
+//		int i = 5;
+//		s = (short)i;
+//		i = s;
+//		System.out.println(i);
+	}
 
-public class BankAccount {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Create Scanner object
-
-        System.out.print("Enter the number of accounts to create: ");
-        int numAccounts = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
-
-        // Creating an array to store multiple SavingAccount objects
-        SavingAccount[] accounts = new SavingAccount[numAccounts];
-
-        // Loop to take input for each account
-        for (int i = 0; i < numAccounts; i++) {
-            System.out.println("\nEnter details for Account " + (i + 1));
-
-            System.out.print("Enter Account Number: ");
-            String accountNumber = scanner.nextLine();
-
-            System.out.print("Enter Account Holder Name: ");
-            String accountHolderName = scanner.nextLine();
-
-            System.out.print("Enter Rate of Interest (ROI in %): ");
-            double roi = scanner.nextDouble() / 100;  // Convert percentage to decimal
-
-            System.out.print("Enter Initial Amount: ");
-            double amount = scanner.nextDouble();
-            scanner.nextLine(); // Consume newline
-
-            // Creating an account object and storing it in the array
-            accounts[i] = new SavingAccount(accountNumber, accountHolderName, roi, amount);
-        }
-
-        // Displaying all account details
-        System.out.println("\n===== All Account Details =====");
-        for (SavingAccount account : accounts) {
-            System.out.println("\nAccount Holder: " + account.getName());
-            System.out.println("Account Number: " + account.getAccountNumber());
-            System.out.println("Initial Amount: $" + account.getAmount());
-            System.out.println("Rate of Interest: " + (account.getRoi() * 100) + "%");
-            System.out.println("Total Amount After One Year: $" + account.calculateTotalAmount());
-        }
-
-        scanner.close(); // Close scanner to prevent resource leak
-    }
 }
+/*
+ * CREATE A CLASS NAMED SAVINGACCOUNT WITH ATTRIBUTES ACCOUNTNUMBER,NAME, ROI AND AMOUNT
+ * CREATE A METHOD CALCULATE INSIDE THIS CLASS AND RETURN THE TOTAL AMOUNT AFTER ONE YEAR.
+ * 
+ * 
+ * Constructors
+ */
+
+/*
+ * OOPs Concepts
+ * 
+ * ENCAPSULATION: Data Binding : example - class
+ * Inheritance: 
+ * Polymorphism: compile time, run time
+ * Abstraction : Abstract class, Interface
+ */

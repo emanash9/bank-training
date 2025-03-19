@@ -7,7 +7,7 @@ public class SavingAccount  extends Account implements PrimaryAccount{
 	private double minBalance;	
 	
 	//Constructor
-	/*public SavingAccount(int accountNumber, String accountHolderName, double roi, double amount, double minBalance) {
+	public SavingAccount(int accountNumber, String accountHolderName, double roi, double amount, double minBalance) {
 		super(accountNumber, accountHolderName, roi);
 		this.roi = roi;
 		this.minBalance = minBalance;
@@ -35,7 +35,7 @@ public class SavingAccount  extends Account implements PrimaryAccount{
 	}
 
 
-	//Behaviour
+	//Behavior
 	public double calculate(double amount, double roi) {
 		return amount + (amount * roi/100);
 	}
@@ -68,7 +68,7 @@ public class SavingAccount  extends Account implements PrimaryAccount{
 		return null;
 	}
 
-*/
+
 
 	
 
