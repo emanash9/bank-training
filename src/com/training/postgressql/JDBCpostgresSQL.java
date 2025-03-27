@@ -12,17 +12,21 @@ import java.sql.PreparedStatement;
 public class JDBCpostgresSQL {
 	public static void main(String[] args) {
 //			
-//		db.url=jdbc:postgresql://localhost:5431/testdb
+//			db.url=jdbc:postgresql://localhost:5431/testdb
 //			db.user=postgres
 //			db.password=eman
-
+		
+			String url = "jdbc:postgresql://localhost:5431/testdb";
+	        String username = "postgres";
+	        String password = "eman";
+ 
 				try {
-					Properties props = new Properties();
-					FileInputStream input = new FileInputStream("db.properties");
-					props.load(input);
-				    String url = props.getProperty("db.url");
-			        String username = props.getProperty("db.user");
-			        String password = props.getProperty("db.password");
+//					Properties props = new Properties();
+//					FileInputStream input = new FileInputStream("db.properties");
+//					props.load(input);
+//				    String url = props.getProperty("db.url");
+//			        String username = props.getProperty("db.user");
+//			        String password = props.getProperty("db.password");
 			       
 			       
 				  Class.forName("org.postgresql.Driver");
