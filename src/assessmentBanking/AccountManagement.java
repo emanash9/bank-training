@@ -13,7 +13,7 @@ public class AccountManagement {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setDouble(1, amount);
-            pstmt.setInt(2, accountNumber); 
+            pstmt.setInt(2, accountNumber);  //
             pstmt.executeUpdate();
             System.out.println("Deposited OMR" + amount + " to account " + accountNumber);
         } catch (SQLException e) {
