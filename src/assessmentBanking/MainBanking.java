@@ -1,6 +1,9 @@
 package assessmentBanking;
 import java.util.Scanner;
 
+
+// main class to run the banking application
+
 public class MainBanking {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

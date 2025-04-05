@@ -1,6 +1,8 @@
 package assessmentBanking;
 import java.sql.*;
 
+// to manage banking operations like deposit, withdraw, check balance, and transfer money
+
 public class AccountManagement {
     private static final String URL = "jdbc:postgresql://localhost:5431/testdb";
     private static final String USER = "postgres";
@@ -118,3 +120,4 @@ public class AccountManagement {
         }
     }
 }
+// 

@@ -1,6 +1,8 @@
 package assessmentBanking;
 import java.sql.*;
 
+
+// to create a new account in the database
 public class CreateAccount {
     private static final String URL = "jdbc:postgresql://localhost:5431/testdb";
     private static final String USER = "postgres";
@@ -21,3 +23,4 @@ public class CreateAccount {
             }
         }
 }
+
