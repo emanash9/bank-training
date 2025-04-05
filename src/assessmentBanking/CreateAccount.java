@@ -1,4 +1,4 @@
-package com.assessment;
+package assessmentBanking;
 import java.sql.*;
 
 public class CreateAccount {

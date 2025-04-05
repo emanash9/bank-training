@@ -1,14 +1,50 @@
-package com.assessment;
+package assessmentBanking;
 import java.util.Scanner;
 
-public class MainBankingApp {
+public class MainBanking {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         AccountManagement accountManagement = new AccountManagement();
         CreateAccount createAccount = new CreateAccount();
 
+        // Registration window
+        System.out.println("Welcome to OAB Banking Application");
+        System.out.println("Please register your username and password");
+        System.out.print("Enter username: ");
+        String registeredUsername = scanner.nextLine();
+        System.out.print("Enter password: ");
+        String registeredPassword = scanner.nextLine();
+        System.out.println("Registration successful! You can now log in.");
+
+        // Simulate login steps for returning users 
+        System.out.println("\nWelcome back! Please log in to your account.");
+        System.out.println("Note: Password will be hidden for security reasons.");
+        System.out.print("Enter username to log in: ");
+        String loginUsername = scanner.nextLine();
+        System.out.print("Enter password to log in: ");
+        System.out.print("Enter password to log in: ");
+        String loginPassword = scanner.nextLine();
+        
+        System.out.print("Password: ");
+        for (int i = 0; i < loginPassword.length(); i++) {
+            System.out.print("*");
+        }
+
+        
+        System.out.println();
+        // Check if login credentials match registered ones
+        if (loginUsername.equals(registeredUsername) && loginPassword.equals(registeredPassword)) {
+			System.out.println("Login successful! Welcome " + registeredUsername);
+		} else {
+			System.out.println("Invalid username or password. Exiting...");
+			scanner.close();
+			return;
+		}
+  
+
+        // Main menu loop
         while (true) {
-            System.out.println("\nOAB Banking Application Menu:");   // my menu :)
+            System.out.println("\nOAB Banking Application Menu:");
             System.out.print("1. Create Account | ");
             System.out.print("2. Deposit Money | ");
             System.out.print("3. Withdraw Money | ");
@@ -18,7 +54,7 @@ public class MainBankingApp {
 
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); //extra/ line
+            scanner.nextLine(); // consume newline
 
             if (choice == 1) {
                 System.out.print("Enter your name: ");
